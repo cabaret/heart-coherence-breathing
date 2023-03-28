@@ -15,10 +15,26 @@ export default function Home() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
-      tl.to(".el", { height: "100%", duration: inhale });
-      tl.to(".el", { height: "100%", duration: holdAfterInhale });
-      tl.to(".el", { height: 0, duration: exhale });
-      tl.to(".el", { height: 0, duration: holdAfterExhale });
+      tl.to(".el", {
+        height: "95%",
+        backgroundColor: "#dcfce7",
+        duration: inhale,
+      });
+      tl.to(".el", {
+        height: "100%",
+        backgroundColor: "#bbf7d0",
+        duration: holdAfterInhale,
+      });
+      tl.to(".el", {
+        height: "5%",
+        backgroundColor: "#dcfce7",
+        duration: exhale,
+      });
+      tl.to(".el", {
+        height: 0,
+        backgroundColor: "#bbf7d0",
+        duration: holdAfterExhale,
+      });
       tl.repeat(-1);
     }, app);
 
